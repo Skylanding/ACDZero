@@ -1,0 +1,228 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+🔧 使用GPU 0
+🌍 创建CAGE环境...
+   根据mentor建议：
+   - 使用确定性Red Agent（无概率性动作选择）
+   - 使用CentralizedObservationWrapper（全局观察）
+   - MCTS用于防御agent（Blue）
+   - 注意：当前实现是Contextual Bandit，不是真正的MCTS树搜索
+✅ 环境创建完成
+   - 第1层：EnterpriseMAE wrapper（Multi-Agent接口）
+   - 第2层：CentralizedObservationWrapper（全局观察）
+   - Red Agent: FiniteStateRedAgent（建议确保确定性行为）
+   - ⚠️  注意：如果CybORG支持自定义Red Agent，应使用DeterministicRedAgentWrapper
+🌳 初始化MuZero MCTS动作筛选器...
+   参考：https://github.com/werner-duvaud/muzero-general
+   MCTS模拟次数: 50
+📊 Agent blue_agent_0 观察空间维度: 578
+📊 Agent blue_agent_1 观察空间维度: 578
+📊 Agent blue_agent_2 观察空间维度: 578
+📊 Agent blue_agent_3 观察空间维度: 578
+📊 Agent blue_agent_4 观察空间维度: 578
+📊 动作空间维度: 41
+🤖 初始化Agent blue_agent_0: obs_dim=578, action_dim=41
+🤖 初始化Agent blue_agent_1: obs_dim=578, action_dim=41
+🤖 初始化Agent blue_agent_2: obs_dim=578, action_dim=41
+🤖 初始化Agent blue_agent_3: obs_dim=578, action_dim=41
+🤖 初始化Agent blue_agent_4: obs_dim=578, action_dim=41
+🤖 初始化PPO策略网络...
+
+🚀 开始训练混合MCTS-PPO架构
+   迭代次数: 500
+   每episode步数: 100
+   MCTS筛选动作数: 10 (从 41 个动作中)
+   输出目录: experiment/unified_training_20251211_201846/checkpoints/hybrid_mcts_ppo_20251211_201849
+
+[   1/500] HybridMCTS-PPO | Reward:  -510.00 | Smoothed:  -510.00 | Best:  -510.00 | Length:  99 | Filter: 24.4% | Time: 585.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   2/500] HybridMCTS-PPO | Reward:  -100.00 | Smoothed:  -469.00 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 699.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   3/500] HybridMCTS-PPO | Reward:  -190.00 | Smoothed:  -441.10 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 773.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   4/500] HybridMCTS-PPO | Reward:  -990.00 | Smoothed:  -495.99 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 919.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   5/500] HybridMCTS-PPO | Reward:  -285.00 | Smoothed:  -474.89 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1164.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   6/500] HybridMCTS-PPO | Reward:  -135.00 | Smoothed:  -440.90 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1206.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   7/500] HybridMCTS-PPO | Reward:  -625.00 | Smoothed:  -459.31 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1451.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   8/500] HybridMCTS-PPO | Reward:  -540.00 | Smoothed:  -467.38 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1655.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[   9/500] HybridMCTS-PPO | Reward:  -205.00 | Smoothed:  -441.14 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1688.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  10/500] HybridMCTS-PPO | Reward:  -335.00 | Smoothed:  -430.53 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1865.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  11/500] HybridMCTS-PPO | Reward:  -600.00 | Smoothed:  -447.48 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 1898.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  12/500] HybridMCTS-PPO | Reward:  -370.00 | Smoothed:  -439.73 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2458.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  13/500] HybridMCTS-PPO | Reward:  -810.00 | Smoothed:  -476.76 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2790.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  14/500] HybridMCTS-PPO | Reward:  -760.00 | Smoothed:  -505.08 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2519.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  15/500] HybridMCTS-PPO | Reward:  -705.00 | Smoothed:  -525.07 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2349.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  16/500] HybridMCTS-PPO | Reward:  -560.00 | Smoothed:  -528.56 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2223.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  17/500] HybridMCTS-PPO | Reward:  -450.00 | Smoothed:  -520.71 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2857.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  18/500] HybridMCTS-PPO | Reward:  -420.00 | Smoothed:  -510.64 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 2334.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  19/500] HybridMCTS-PPO | Reward:  -270.00 | Smoothed:  -486.57 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 3183.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  20/500] HybridMCTS-PPO | Reward:  -735.00 | Smoothed:  -511.42 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4237.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  21/500] HybridMCTS-PPO | Reward:  -135.00 | Smoothed:  -473.77 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4449.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  22/500] HybridMCTS-PPO | Reward:  -350.00 | Smoothed:  -461.40 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 3852.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  23/500] HybridMCTS-PPO | Reward:  -380.00 | Smoothed:  -453.26 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4822.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  24/500] HybridMCTS-PPO | Reward:  -280.00 | Smoothed:  -435.93 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4410.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  25/500] HybridMCTS-PPO | Reward: -1195.00 | Smoothed:  -511.84 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4152.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  26/500] HybridMCTS-PPO | Reward: -1440.00 | Smoothed:  -604.65 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 4246.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  27/500] HybridMCTS-PPO | Reward:  -370.00 | Smoothed:  -581.19 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5535.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  28/500] HybridMCTS-PPO | Reward:  -200.00 | Smoothed:  -543.07 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5429.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  29/500] HybridMCTS-PPO | Reward:  -335.00 | Smoothed:  -522.26 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5092.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  30/500] HybridMCTS-PPO | Reward:  -410.00 | Smoothed:  -511.04 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5837.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  31/500] HybridMCTS-PPO | Reward:  -885.00 | Smoothed:  -548.43 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5752.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  32/500] HybridMCTS-PPO | Reward:  -155.00 | Smoothed:  -509.09 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 6242.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  33/500] HybridMCTS-PPO | Reward:  -865.00 | Smoothed:  -544.68 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 6034.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  34/500] HybridMCTS-PPO | Reward: -1065.00 | Smoothed:  -596.71 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 6649.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  35/500] HybridMCTS-PPO | Reward:  -380.00 | Smoothed:  -575.04 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 7068.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  36/500] HybridMCTS-PPO | Reward:  -730.00 | Smoothed:  -590.54 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 7257.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  37/500] HybridMCTS-PPO | Reward:  -360.00 | Smoothed:  -567.48 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 7044.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  38/500] HybridMCTS-PPO | Reward:  -345.00 | Smoothed:  -545.24 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 6163.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  39/500] HybridMCTS-PPO | Reward:  -900.00 | Smoothed:  -580.71 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 6330.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  40/500] HybridMCTS-PPO | Reward:  -475.00 | Smoothed:  -570.14 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 5701.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  41/500] HybridMCTS-PPO | Reward:  -550.00 | Smoothed:  -568.13 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 9255.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  42/500] HybridMCTS-PPO | Reward:  -590.00 | Smoothed:  -570.31 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 8029.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  43/500] HybridMCTS-PPO | Reward:  -635.00 | Smoothed:  -576.78 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 7275.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  44/500] HybridMCTS-PPO | Reward:  -195.00 | Smoothed:  -538.60 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 9174.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  45/500] HybridMCTS-PPO | Reward:  -545.00 | Smoothed:  -539.24 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 8264.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  46/500] HybridMCTS-PPO | Reward:  -560.00 | Smoothed:  -541.32 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 9285.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  47/500] HybridMCTS-PPO | Reward:  -280.00 | Smoothed:  -515.19 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 10005.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  48/500] HybridMCTS-PPO | Reward:  -645.00 | Smoothed:  -528.17 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 9699.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  49/500] HybridMCTS-PPO | Reward: -1130.00 | Smoothed:  -588.35 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 8761.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  50/500] HybridMCTS-PPO | Reward:  -500.00 | Smoothed:  -579.52 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 8446.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  51/500] HybridMCTS-PPO | Reward:  -130.00 | Smoothed:  -534.57 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 11879.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  52/500] HybridMCTS-PPO | Reward:  -355.00 | Smoothed:  -516.61 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 10630.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  53/500] HybridMCTS-PPO | Reward:  -630.00 | Smoothed:  -527.95 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 10512.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  54/500] HybridMCTS-PPO | Reward:  -460.00 | Smoothed:  -521.15 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 9818.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  55/500] HybridMCTS-PPO | Reward:  -980.00 | Smoothed:  -567.04 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 11681.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  56/500] HybridMCTS-PPO | Reward:  -285.00 | Smoothed:  -538.83 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 12609.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  57/500] HybridMCTS-PPO | Reward:  -830.00 | Smoothed:  -567.95 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 11019.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  58/500] HybridMCTS-PPO | Reward:  -895.00 | Smoothed:  -600.66 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 11190.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  59/500] HybridMCTS-PPO | Reward:  -625.00 | Smoothed:  -603.09 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 11658.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  60/500] HybridMCTS-PPO | Reward:  -395.00 | Smoothed:  -582.28 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 10838.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  61/500] HybridMCTS-PPO | Reward:  -445.00 | Smoothed:  -568.55 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 13055.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  62/500] HybridMCTS-PPO | Reward:  -680.00 | Smoothed:  -579.70 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 13398.7s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  63/500] HybridMCTS-PPO | Reward:  -180.00 | Smoothed:  -539.73 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 14952.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  64/500] HybridMCTS-PPO | Reward:  -485.00 | Smoothed:  -534.25 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 15077.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  65/500] HybridMCTS-PPO | Reward:  -530.00 | Smoothed:  -533.83 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 14511.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  66/500] HybridMCTS-PPO | Reward:  -430.00 | Smoothed:  -523.45 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 15213.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  67/500] HybridMCTS-PPO | Reward:  -190.00 | Smoothed:  -490.10 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 14169.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  68/500] HybridMCTS-PPO | Reward:  -920.00 | Smoothed:  -533.09 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 12335.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  69/500] HybridMCTS-PPO | Reward: -1360.00 | Smoothed:  -615.78 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 13198.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  70/500] HybridMCTS-PPO | Reward:  -475.00 | Smoothed:  -601.70 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 13187.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  71/500] HybridMCTS-PPO | Reward:  -730.00 | Smoothed:  -614.53 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 14536.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  72/500] HybridMCTS-PPO | Reward:  -390.00 | Smoothed:  -592.08 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 15688.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  73/500] HybridMCTS-PPO | Reward:  -170.00 | Smoothed:  -549.87 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 14009.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  74/500] HybridMCTS-PPO | Reward:  -425.00 | Smoothed:  -537.39 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 12833.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  75/500] HybridMCTS-PPO | Reward:  -905.00 | Smoothed:  -574.15 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 15591.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  76/500] HybridMCTS-PPO | Reward:  -215.00 | Smoothed:  -538.23 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 18468.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  77/500] HybridMCTS-PPO | Reward:  -475.00 | Smoothed:  -531.91 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 13595.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  78/500] HybridMCTS-PPO | Reward:  -455.00 | Smoothed:  -524.22 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 16275.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  79/500] HybridMCTS-PPO | Reward:  -305.00 | Smoothed:  -502.30 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 19490.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  80/500] HybridMCTS-PPO | Reward:  -320.00 | Smoothed:  -484.07 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 17109.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  81/500] HybridMCTS-PPO | Reward:  -575.00 | Smoothed:  -493.16 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 17717.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  82/500] HybridMCTS-PPO | Reward:  -670.00 | Smoothed:  -510.84 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 16308.4s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  83/500] HybridMCTS-PPO | Reward:  -615.00 | Smoothed:  -521.26 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 19073.5s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  84/500] HybridMCTS-PPO | Reward:  -265.00 | Smoothed:  -495.63 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 19222.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  85/500] HybridMCTS-PPO | Reward:  -350.00 | Smoothed:  -481.07 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 19461.2s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  86/500] HybridMCTS-PPO | Reward:  -265.00 | Smoothed:  -459.46 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 16263.0s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  87/500] HybridMCTS-PPO | Reward:  -760.00 | Smoothed:  -489.52 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 17498.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  88/500] HybridMCTS-PPO | Reward:  -480.00 | Smoothed:  -488.57 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 18149.8s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  89/500] HybridMCTS-PPO | Reward:  -140.00 | Smoothed:  -453.71 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 19752.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  90/500] HybridMCTS-PPO | Reward:  -185.00 | Smoothed:  -426.84 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 18759.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  91/500] HybridMCTS-PPO | Reward: -1050.00 | Smoothed:  -489.15 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 17296.3s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  92/500] HybridMCTS-PPO | Reward:  -940.00 | Smoothed:  -534.24 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 20680.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  93/500] HybridMCTS-PPO | Reward:  -835.00 | Smoothed:  -564.31 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 16591.6s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  94/500] HybridMCTS-PPO | Reward:  -930.00 | Smoothed:  -600.88 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 24179.1s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv
+[  95/500] HybridMCTS-PPO | Reward:  -440.00 | Smoothed:  -584.79 | Best:  -100.00 | Length:  99 | Filter: 24.4% | Time: 21662.9s
+💾 数据已保存到: experiment/unified_training_20251211_201846/training_data/hybrid_mcts_ppo_training_data.csv

@@ -1,0 +1,33 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+🔧 使用GPU 3
+🌍 创建CAGE环境...
+🌳 初始化MCTS动作筛选器...
+📊 Agent blue_agent_0 观察空间维度: 92
+📊 Agent blue_agent_1 观察空间维度: 92
+📊 Agent blue_agent_2 观察空间维度: 92
+📊 Agent blue_agent_3 观察空间维度: 92
+📊 Agent blue_agent_4 观察空间维度: 210
+📊 动作空间维度: 82
+🤖 初始化Agent blue_agent_0: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_1: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_2: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_3: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_4: obs_dim=210, action_dim=82
+🤖 初始化PPO策略网络...
+
+🚀 开始训练混合MCTS-PPO架构
+   迭代次数: 1
+   每episode步数: 5
+   MCTS筛选动作数: 10 (从 82 个动作中)
+   输出目录: hybrid_training_20251210_035225/hybrid_mcts_ppo_20251210_035229
+
+[   1/1] HybridMCTS-PPO | Reward:     0.00 | Length:   5 | Filter: 12.2% | Time: 0.7s
+
+✅ 训练完成！
+   总耗时: 0.0 分钟
+   平均奖励: 0.00
+   最佳奖励: 0.00
+   训练数据已保存到: hybrid_training_20251210_035225/hybrid_mcts_ppo_20251210_035229/checkpoints

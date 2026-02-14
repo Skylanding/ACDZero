@@ -1,0 +1,28 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+  使用GPU: 3
+================================================================================
+MCTS训练配置
+  训练迭代: 1000
+  Episode长度: 100
+  MCTS模拟次数: 50
+================================================================================
+
+开始训练 MCTS...
+训练数据将保存到: parallel_training_20251209_213711/checkpoints/training_data/mcts_training_data.csv
+Traceback (most recent call last):
+  File "train_mcts.py", line 261, in <module>
+    train_mcts(
+  File "train_mcts.py", line 194, in train_mcts
+    obs, rewards, terminations, truncations, info = cyborg.step(actions)
+  File "/home/ubuntu/cage-challenge-4/CybORG/Agents/Wrappers/EnterpriseMAE.py", line 67, in step
+    obs, rew, terminated, truncated, info = super(BlueEnterpriseWrapper, self).step(
+  File "/home/ubuntu/cage-challenge-4/CybORG/Agents/Wrappers/BlueFlatWrapper.py", line 117, in step
+    observations, rewards, terminated, truncated, info = super().step(
+  File "/home/ubuntu/cage-challenge-4/CybORG/Agents/Wrappers/BlueFixedActionWrapper.py", line 143, in step
+    action_dict = {
+  File "/home/ubuntu/cage-challenge-4/CybORG/Agents/Wrappers/BlueFixedActionWrapper.py", line 146, in <dictcomp>
+    else self._action_space[agent]["actions"][action]
+IndexError: list index out of range

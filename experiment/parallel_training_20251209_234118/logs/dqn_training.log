@@ -1,0 +1,26 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-12-09 23:41:23,617	WARNING deprecation.py:50 -- DeprecationWarning: `rllib/algorithms/simple_q/` has been deprecated. Use `rllib_contrib/simple_q/` instead. This will raise an error in the future!
+2025-12-09 23:41:23,769	WARNING env.py:298 -- Your MultiAgentEnv <EnterpriseMAE instance> does not have some or all of the needed base-class attributes! Make sure you call `super().__init__()` from within your MutiAgentEnv's constructor. This will raise an error in the future.
+2025-12-09 23:41:25,270	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+================================================================================
+训练配置: DQN
+  使用GPU: 2 (1张卡, 单GPU模式)
+  训练迭代: 1000
+  Episode长度: 100
+  折扣因子: 0.95
+  学习率: 0.0001
+================================================================================
+
+开始训练 DQN...
+训练数据将保存到: parallel_training_20251209_234118/checkpoints/training_data/dqn_training_data.csv
+[   0/1000] DQN | Reward: -2223.50 | Best: -2223.50 | Time: 252.1min
+2025-12-10 03:53:30,514	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+Traceback (most recent call last):
+  File "train_distributed.py", line 314, in <module>
+    train_algorithm(
+  File "train_distributed.py", line 261, in train_algorithm
+    with open(csv_file, 'a', newline='') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'parallel_training_20251209_234118/checkpoints/training_data/dqn_training_data.csv'

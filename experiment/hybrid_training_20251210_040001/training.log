@@ -1,0 +1,82 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+🔧 使用GPU 3
+🌍 创建CAGE环境...
+🌳 初始化MCTS动作筛选器...
+📊 Agent blue_agent_0 观察空间维度: 92
+📊 Agent blue_agent_1 观察空间维度: 92
+📊 Agent blue_agent_2 观察空间维度: 92
+📊 Agent blue_agent_3 观察空间维度: 92
+📊 Agent blue_agent_4 观察空间维度: 210
+📊 动作空间维度: 82
+🤖 初始化Agent blue_agent_0: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_1: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_2: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_3: obs_dim=92, action_dim=82
+🤖 初始化Agent blue_agent_4: obs_dim=210, action_dim=82
+🤖 初始化PPO策略网络...
+
+🚀 开始训练混合MCTS-PPO架构
+   迭代次数: 50
+   每episode步数: 100
+   MCTS筛选动作数: 10 (从 82 个动作中)
+   输出目录: experiment/hybrid_training_20251210_040001/hybrid_mcts_ppo_20251210_040004
+
+[   1/50] HybridMCTS-PPO | Reward: -3320.00 | Length:  99 | Filter: 12.2% | Time: 4.2s
+[   2/50] HybridMCTS-PPO | Reward: -3810.00 | Length:  99 | Filter: 12.2% | Time: 3.8s
+[   3/50] HybridMCTS-PPO | Reward: -2715.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[   4/50] HybridMCTS-PPO | Reward: -2585.00 | Length:  99 | Filter: 12.2% | Time: 4.1s
+[   5/50] HybridMCTS-PPO | Reward: -1865.00 | Length:  99 | Filter: 12.2% | Time: 4.2s
+[   6/50] HybridMCTS-PPO | Reward: -1320.00 | Length:  99 | Filter: 12.2% | Time: 3.6s
+[   7/50] HybridMCTS-PPO | Reward: -1385.00 | Length:  99 | Filter: 12.2% | Time: 4.5s
+[   8/50] HybridMCTS-PPO | Reward: -2550.00 | Length:  99 | Filter: 12.2% | Time: 3.6s
+[   9/50] HybridMCTS-PPO | Reward: -2090.00 | Length:  99 | Filter: 12.2% | Time: 4.0s
+[  10/50] HybridMCTS-PPO | Reward: -1570.00 | Length:  99 | Filter: 12.2% | Time: 3.8s
+[  11/50] HybridMCTS-PPO | Reward: -4425.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  12/50] HybridMCTS-PPO | Reward: -3275.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  13/50] HybridMCTS-PPO | Reward: -1555.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  14/50] HybridMCTS-PPO | Reward: -2915.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  15/50] HybridMCTS-PPO | Reward: -2050.00 | Length:  99 | Filter: 12.2% | Time: 4.3s
+[  16/50] HybridMCTS-PPO | Reward: -1940.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  17/50] HybridMCTS-PPO | Reward: -1900.00 | Length:  99 | Filter: 12.2% | Time: 3.4s
+[  18/50] HybridMCTS-PPO | Reward: -1315.00 | Length:  99 | Filter: 12.2% | Time: 3.3s
+[  19/50] HybridMCTS-PPO | Reward: -1435.00 | Length:  99 | Filter: 12.2% | Time: 3.2s
+[  20/50] HybridMCTS-PPO | Reward: -2125.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  21/50] HybridMCTS-PPO | Reward: -1390.00 | Length:  99 | Filter: 12.2% | Time: 3.8s
+[  22/50] HybridMCTS-PPO | Reward: -3160.00 | Length:  99 | Filter: 12.2% | Time: 4.1s
+[  23/50] HybridMCTS-PPO | Reward: -2930.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  24/50] HybridMCTS-PPO | Reward: -2050.00 | Length:  99 | Filter: 12.2% | Time: 4.0s
+[  25/50] HybridMCTS-PPO | Reward: -2700.00 | Length:  99 | Filter: 12.2% | Time: 4.0s
+[  26/50] HybridMCTS-PPO | Reward: -2710.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  27/50] HybridMCTS-PPO | Reward: -2995.00 | Length:  99 | Filter: 12.2% | Time: 4.4s
+[  28/50] HybridMCTS-PPO | Reward: -2165.00 | Length:  99 | Filter: 12.2% | Time: 3.4s
+[  29/50] HybridMCTS-PPO | Reward: -2615.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  30/50] HybridMCTS-PPO | Reward: -3575.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  31/50] HybridMCTS-PPO | Reward: -2775.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  32/50] HybridMCTS-PPO | Reward: -2360.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  33/50] HybridMCTS-PPO | Reward: -2045.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  34/50] HybridMCTS-PPO | Reward: -1845.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  35/50] HybridMCTS-PPO | Reward: -1655.00 | Length:  99 | Filter: 12.2% | Time: 3.1s
+[  36/50] HybridMCTS-PPO | Reward: -1115.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  37/50] HybridMCTS-PPO | Reward: -2360.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  38/50] HybridMCTS-PPO | Reward: -1475.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  39/50] HybridMCTS-PPO | Reward: -2265.00 | Length:  99 | Filter: 12.2% | Time: 3.6s
+[  40/50] HybridMCTS-PPO | Reward: -1665.00 | Length:  99 | Filter: 12.2% | Time: 4.3s
+[  41/50] HybridMCTS-PPO | Reward: -3375.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  42/50] HybridMCTS-PPO | Reward: -1755.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  43/50] HybridMCTS-PPO | Reward: -1510.00 | Length:  99 | Filter: 12.2% | Time: 4.0s
+[  44/50] HybridMCTS-PPO | Reward: -2665.00 | Length:  99 | Filter: 12.2% | Time: 3.6s
+[  45/50] HybridMCTS-PPO | Reward: -1180.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  46/50] HybridMCTS-PPO | Reward: -2380.00 | Length:  99 | Filter: 12.2% | Time: 3.3s
+[  47/50] HybridMCTS-PPO | Reward: -2485.00 | Length:  99 | Filter: 12.2% | Time: 3.5s
+[  48/50] HybridMCTS-PPO | Reward: -1785.00 | Length:  99 | Filter: 12.2% | Time: 3.9s
+[  49/50] HybridMCTS-PPO | Reward: -2980.00 | Length:  99 | Filter: 12.2% | Time: 3.7s
+[  50/50] HybridMCTS-PPO | Reward: -1000.00 | Length:  99 | Filter: 12.2% | Time: 3.8s
+
+✅ 训练完成！
+   总耗时: 3.1 分钟
+   平均奖励: -2262.20
+   最佳奖励: -1000.00
+   训练数据已保存到: experiment/hybrid_training_20251210_040001/hybrid_mcts_ppo_20251210_040004/checkpoints

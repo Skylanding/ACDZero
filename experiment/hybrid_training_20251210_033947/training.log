@@ -1,0 +1,15 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+🔧 使用GPU 3
+🌍 创建CAGE环境...
+🌳 初始化MCTS动作筛选器...
+📊 观察空间维度: 92
+📊 动作空间维度: 82
+Traceback (most recent call last):
+  File "train_hybrid_mcts_ppo.py", line 746, in <module>
+    train_hybrid_mcts_ppo(
+  File "train_hybrid_mcts_ppo.py", line 553, in train_hybrid_mcts_ppo
+    agent_obs_dim = agent_obs_dims[agent_id]
+NameError: name 'agent_obs_dims' is not defined

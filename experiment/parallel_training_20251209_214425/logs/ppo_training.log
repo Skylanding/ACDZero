@@ -1,0 +1,43 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-12-09 21:44:32,221	INFO worker.py:1752 -- Started a local Ray instance.
+[36m(pid=2991326)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(pid=2991326)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(pid=2991326)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(pid=2991326)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[36m(RolloutWorker pid=2991326)[0m 2025-12-09 21:44:37,869	WARNING env.py:298 -- Your MultiAgentEnv <EnterpriseMAE instance> does not have some or all of the needed base-class attributes! Make sure you call `super().__init__()` from within your MutiAgentEnv's constructor. This will raise an error in the future.
+2025-12-09 21:44:40,738	INFO trainable.py:164 -- Trainable.setup took 11.073 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2025-12-09 21:44:40,739	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2025-12-09 21:45:23,232	WARNING deprecation.py:50 -- DeprecationWarning: `_get_slice_indices` has been deprecated. This will raise an error in the future!
+================================================================================
+训练配置: PPO
+  使用GPU: 1 (1张卡, 单GPU模式)
+  训练迭代: 1000
+  Episode长度: 100
+  折扣因子: 0.95
+  学习率: 5e-05
+================================================================================
+
+开始训练 PPO...
+训练数据将保存到: parallel_training_20251209_214425/checkpoints/training_data/ppo_training_data.csv
+[   0/1000] PPO | Reward: -2320.00 | Best: -2320.00 | Time: 0.8min
+[  50/1000] PPO | Reward:  -551.75 | Best:  -551.75 | Time: 42.3min
+[ 100/1000] PPO | Reward:  -586.05 | Best:  -528.90 | Time: 82.9min
+[ 150/1000] PPO | Reward:  -603.90 | Best:  -489.10 | Time: 124.2min
+[ 200/1000] PPO | Reward:  -572.15 | Best:  -489.10 | Time: 166.2min
+[ 250/1000] PPO | Reward:  -551.75 | Best:  -489.10 | Time: 208.8min
+[ 300/1000] PPO | Reward:  -577.80 | Best:  -489.10 | Time: 251.1min
+[ 350/1000] PPO | Reward:  -591.45 | Best:  -489.10 | Time: 293.3min
+[ 400/1000] PPO | Reward:  -604.25 | Best:  -489.10 | Time: 335.6min
+Traceback (most recent call last):
+  File "train_distributed.py", line 314, in <module>
+    train_algorithm(
+  File "train_distributed.py", line 261, in train_algorithm
+    with open(csv_file, 'a', newline='') as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'parallel_training_20251209_214425/checkpoints/training_data/ppo_training_data.csv'
+[36m(pid=2991327)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(pid=2991327)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(pid=2991327)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(pid=2991327)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

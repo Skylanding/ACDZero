@@ -1,0 +1,55 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-12-11 19:29:48,042	INFO worker.py:1752 -- Started a local Ray instance.
+[36m(pid=1047531)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(pid=1047531)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(pid=1047531)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(pid=1047531)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+[36m(RolloutWorker pid=1047530)[0m 2025-12-11 19:29:53,989	WARNING env.py:298 -- Your MultiAgentEnv <EnterpriseMAE instance> does not have some or all of the needed base-class attributes! Make sure you call `super().__init__()` from within your MutiAgentEnv's constructor. This will raise an error in the future.
+2025-12-11 19:29:56,407	INFO trainable.py:164 -- Trainable.setup took 10.982 seconds. If your trainable is slow to initialize, consider setting reuse_actors=True to reduce actor creation overheads.
+2025-12-11 19:29:56,408	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+2025-12-11 19:30:39,910	WARNING deprecation.py:50 -- DeprecationWarning: `_get_slice_indices` has been deprecated. This will raise an error in the future!
+================================================================================
+训练配置: PPO
+  使用GPU: 1 (1张卡, 单GPU模式)
+  训练迭代: 500
+  Episode长度: 100
+  折扣因子: 0.95
+  学习率: 5e-05
+================================================================================
+
+开始训练 PPO...
+训练数据将保存到: experiment/unified_training_20251211_192941/checkpoints/training_data/ppo_training_data.csv
+[   0/500] PPO | Reward: -2177.75 | Best: -2177.75 | Time: 0.8min
+[  50/500] PPO | Reward:  -619.10 | Best:  -619.10 | Time: 41.6min
+[ 100/500] PPO | Reward:  -563.85 | Best:  -502.85 | Time: 91.1min
+[ 150/500] PPO | Reward:  -600.70 | Best:  -502.85 | Time: 132.0min
+[ 200/500] PPO | Reward:  -619.15 | Best:  -502.85 | Time: 173.3min
+[ 250/500] PPO | Reward:  -645.85 | Best:  -502.85 | Time: 214.6min
+[ 300/500] PPO | Reward:  -602.75 | Best:  -502.85 | Time: 255.7min
+[ 350/500] PPO | Reward:  -600.95 | Best:  -502.85 | Time: 297.1min
+[ 400/500] PPO | Reward:  -558.35 | Best:  -502.85 | Time: 338.9min
+[ 450/500] PPO | Reward:  -569.55 | Best:  -502.85 | Time: 380.6min
+[ 499/500] PPO | Reward:  -599.95 | Best:  -502.85 | Time: 421.8min
+训练数据已保存到: experiment/unified_training_20251211_192941/checkpoints/training_data/ppo_training_data.json
+
+PPO 模型已保存到: experiment/unified_training_20251211_192941/checkpoints/ppo_distributed
+
+开始评估...
+Traceback (most recent call last):
+  File "train_distributed.py", line 314, in <module>
+    train_algorithm(
+  File "train_distributed.py", line 287, in train_algorithm
+    output = algo.evaluate()
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/ray/rllib/algorithms/algorithm.py", line 961, in evaluate
+    raise ValueError(
+ValueError: Cannot evaluate w/o an evaluation worker set in the Algorithm or w/o an env on the local worker!
+Try one of the following:
+1) Set `evaluation_interval` >= 0 to force creating a separate evaluation worker set.
+2) Set `create_env_on_driver=True` to force the local (non-eval) worker to have an environment to evaluate on.
+[36m(pid=1047530)[0m Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+[36m(pid=1047530)[0m Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+[36m(pid=1047530)[0m Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+[36m(pid=1047530)[0m See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.

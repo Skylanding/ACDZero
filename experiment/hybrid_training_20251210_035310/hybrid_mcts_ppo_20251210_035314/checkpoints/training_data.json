@@ -1,0 +1,150 @@
+{
+  "iterations": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19
+  ],
+  "episode_rewards": [
+    -1895.0,
+    -695.0,
+    -1915.0,
+    -3065.0,
+    -3500.0,
+    -2815.0,
+    -1640.0,
+    -1080.0,
+    -1970.0,
+    -1865.0,
+    -3500.0,
+    -1320.0,
+    -1580.0,
+    -2915.0,
+    -1965.0,
+    -620.0,
+    -3800.0,
+    -1940.0,
+    -2240.0,
+    -3070.0
+  ],
+  "episode_lengths": [
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99
+  ],
+  "mcts_filter_stats": [
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 40590,
+      "filtered_actions": 4950
+    }
+  ]
+}

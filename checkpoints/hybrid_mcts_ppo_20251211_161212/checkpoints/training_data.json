@@ -1,0 +1,17 @@
+{
+  "iterations": [
+    0
+  ],
+  "episode_rewards": [
+    -25.0
+  ],
+  "episode_lengths": [
+    10
+  ],
+  "mcts_filter_stats": [
+    {
+      "total_actions": 2050,
+      "filtered_actions": 500
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+{
+  "iterations": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66
+  ],
+  "episode_rewards": [
+    -650.0,
+    -430.0,
+    -410.0,
+    -700.0,
+    -240.0,
+    -600.0,
+    -450.0,
+    -320.0,
+    -590.0,
+    -235.0,
+    -285.0,
+    -525.0,
+    -405.0,
+    -810.0,
+    -240.0,
+    -240.0,
+    -160.0,
+    -250.0,
+    -590.0,
+    -520.0,
+    -760.0,
+    -690.0,
+    -735.0,
+    -865.0,
+    -215.0,
+    -135.0,
+    -1210.0,
+    -720.0,
+    -900.0,
+    -900.0,
+    -40.0,
+    -95.0,
+    -395.0,
+    -465.0,
+    -1110.0,
+    -505.0,
+    -910.0,
+    -465.0,
+    -420.0,
+    -485.0,
+    -690.0,
+    -460.0,
+    -545.0,
+    -1915.0,
+    -145.0,
+    -295.0,
+    -125.0,
+    -910.0,
+    -700.0,
+    -750.0,
+    -525.0,
+    -310.0,
+    -285.0,
+    -700.0,
+    -295.0,
+    -870.0,
+    -785.0,
+    -120.0,
+    -665.0,
+    -395.0,
+    -1455.0,
+    -195.0,
+    -1610.0,
+    -410.0,
+    -1285.0,
+    -1075.0,
+    -1100.0
+  ],
+  "episode_lengths": [
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99,
+    99
+  ],
+  "mcts_filter_stats": [
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    },
+    {
+      "total_actions": 20295,
+      "filtered_actions": 4950
+    }
+  ]
+}

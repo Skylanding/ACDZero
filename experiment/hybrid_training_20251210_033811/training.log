@@ -1,0 +1,41 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+🔧 使用GPU 3
+🌍 创建CAGE环境...
+🌳 初始化MCTS动作筛选器...
+📊 观察空间维度: 92
+📊 动作空间维度: 82
+🤖 初始化PPO策略网络...
+
+🚀 开始训练混合MCTS-PPO架构
+   迭代次数: 1
+   每episode步数: 5
+   MCTS筛选动作数: 10 (从 82 个动作中)
+   输出目录: hybrid_training_20251210_033811/hybrid_mcts_ppo_20251210_033814
+
+Traceback (most recent call last):
+  File "train_hybrid_mcts_ppo.py", line 744, in <module>
+    train_hybrid_mcts_ppo(
+  File "train_hybrid_mcts_ppo.py", line 620, in train_hybrid_mcts_ppo
+    result = agent.select_action(agent_obs, all_actions)
+  File "train_hybrid_mcts_ppo.py", line 364, in select_action
+    all_probs = self.policy_net.get_action_probs(obs_tensor).squeeze().numpy()
+  File "train_hybrid_mcts_ppo.py", line 277, in get_action_probs
+    logits = self.forward(obs)
+  File "train_hybrid_mcts_ppo.py", line 272, in forward
+    logits = self.net(obs)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/container.py", line 219, in forward
+    input = module(input)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ubuntu/miniconda3/envs/cage4/lib/python3.8/site-packages/torch/nn/modules/linear.py", line 117, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x210 and 92x128)

@@ -1,0 +1,41 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+2025-12-11 20:18:49,347	WARNING deprecation.py:50 -- DeprecationWarning: `rllib/algorithms/simple_q/` has been deprecated. Use `rllib_contrib/simple_q/` instead. This will raise an error in the future!
+2025-12-11 20:18:49,465	WARNING env.py:298 -- Your MultiAgentEnv <EnterpriseMAE instance> does not have some or all of the needed base-class attributes! Make sure you call `super().__init__()` from within your MutiAgentEnv's constructor. This will raise an error in the future.
+2025-12-11 20:18:50,798	WARNING util.py:62 -- Install gputil for GPU system monitoring.
+================================================================================
+训练配置: DQN
+  使用GPU: 2 (1张卡, 单GPU模式)
+  训练迭代: 500
+  Episode长度: 100
+  折扣因子: 0.95
+  学习率: 0.0001
+================================================================================
+
+开始训练 DQN...
+训练数据将保存到: experiment/unified_training_20251211_201846/checkpoints/training_data/dqn_training_data.csv
+[   0/500] DQN | Reward: -2211.00 | Best: -2211.00 | Time: 0.8min
+2025-12-11 20:19:38,194	WARNING deprecation.py:50 -- DeprecationWarning: `ray.rllib.execution.train_ops.multi_gpu_train_one_step` has been deprecated. This will raise an error in the future!
+[  50/500] DQN | Reward:  -571.50 | Best:  -563.60 | Time: 88.7min
+[ 100/500] DQN | Reward:  -583.35 | Best:  -546.65 | Time: 179.6min
+[ 150/500] DQN | Reward:  -550.55 | Best:  -520.20 | Time: 271.0min
+[ 200/500] DQN | Reward:  -525.95 | Best:  -507.85 | Time: 363.6min
+[ 250/500] DQN | Reward:  -540.90 | Best:  -489.10 | Time: 444.5min
+[ 300/500] DQN | Reward:  -635.50 | Best:  -485.70 | Time: 518.0min
+[ 350/500] DQN | Reward:  -570.10 | Best:  -485.70 | Time: 594.9min
+[ 400/500] DQN | Reward:  -463.20 | Best:  -463.20 | Time: 681.3min
+[ 450/500] DQN | Reward:  -521.45 | Best:  -463.20 | Time: 767.4min
+[ 499/500] DQN | Reward:  -586.35 | Best:  -463.20 | Time: 854.9min
+训练数据已保存到: experiment/unified_training_20251211_201846/checkpoints/training_data/dqn_training_data.json
+
+DQN 模型已保存到: experiment/unified_training_20251211_201846/checkpoints/dqn_distributed
+
+开始评估...
+Traceback (most recent call last):
+  File "train_distributed.py", line 314, in <module>
+    train_algorithm(
+  File "train_distributed.py", line 289, in train_algorithm
+    final_std = output['evaluation']['episode_reward_std']
+KeyError: 'episode_reward_std'

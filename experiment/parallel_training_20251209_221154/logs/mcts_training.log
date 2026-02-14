@@ -1,0 +1,123 @@
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+  使用GPU: 3
+================================================================================
+MCTS训练配置
+  训练迭代: 1000
+  Episode长度: 100
+  MCTS模拟次数: 50
+================================================================================
+
+开始训练 MCTS...
+训练数据将保存到: parallel_training_20251209_221154/checkpoints/training_data/mcts_training_data.csv
+[   0/1000] MCTS | Reward: -3285.00 | Best: -3285.00 | Length:  99 | Time: 0.1min
+[  10/1000] MCTS | Reward: -1695.00 | Best:  -730.00 | Length:  99 | Time: 0.9min
+[  20/1000] MCTS | Reward: -1900.00 | Best:  -730.00 | Length:  99 | Time: 1.8min
+[  30/1000] MCTS | Reward: -1845.00 | Best:  -730.00 | Length:  99 | Time: 2.6min
+[  40/1000] MCTS | Reward: -1475.00 | Best:  -730.00 | Length:  99 | Time: 3.4min
+[  50/1000] MCTS | Reward:  -930.00 | Best:  -730.00 | Length:  99 | Time: 4.2min
+[  60/1000] MCTS | Reward: -2085.00 | Best:  -730.00 | Length:  99 | Time: 4.9min
+[  70/1000] MCTS | Reward: -2745.00 | Best:  -730.00 | Length:  99 | Time: 5.7min
+[  80/1000] MCTS | Reward: -3410.00 | Best:  -730.00 | Length:  99 | Time: 6.5min
+[  90/1000] MCTS | Reward: -2835.00 | Best:  -685.00 | Length:  99 | Time: 7.3min
+[ 100/1000] MCTS | Reward: -2050.00 | Best:  -685.00 | Length:  99 | Time: 8.1min
+[ 110/1000] MCTS | Reward: -1590.00 | Best:  -685.00 | Length:  99 | Time: 8.9min
+[ 120/1000] MCTS | Reward: -3300.00 | Best:  -685.00 | Length:  99 | Time: 9.7min
+[ 130/1000] MCTS | Reward: -2700.00 | Best:  -685.00 | Length:  99 | Time: 10.5min
+[ 140/1000] MCTS | Reward: -1650.00 | Best:  -685.00 | Length:  99 | Time: 11.2min
+[ 150/1000] MCTS | Reward: -1395.00 | Best:  -685.00 | Length:  99 | Time: 12.0min
+[ 160/1000] MCTS | Reward: -2020.00 | Best:  -685.00 | Length:  99 | Time: 12.8min
+[ 170/1000] MCTS | Reward: -2295.00 | Best:  -685.00 | Length:  99 | Time: 13.5min
+[ 180/1000] MCTS | Reward: -1630.00 | Best:  -685.00 | Length:  99 | Time: 14.3min
+[ 190/1000] MCTS | Reward: -2355.00 | Best:  -685.00 | Length:  99 | Time: 15.1min
+[ 200/1000] MCTS | Reward: -2000.00 | Best:  -685.00 | Length:  99 | Time: 15.9min
+[ 210/1000] MCTS | Reward: -1430.00 | Best:  -540.00 | Length:  99 | Time: 16.7min
+[ 220/1000] MCTS | Reward: -2255.00 | Best:  -540.00 | Length:  99 | Time: 17.5min
+[ 230/1000] MCTS | Reward: -3475.00 | Best:  -540.00 | Length:  99 | Time: 18.3min
+[ 240/1000] MCTS | Reward: -1105.00 | Best:  -540.00 | Length:  99 | Time: 19.1min
+[ 250/1000] MCTS | Reward: -1445.00 | Best:  -540.00 | Length:  99 | Time: 19.9min
+[ 260/1000] MCTS | Reward: -3255.00 | Best:  -540.00 | Length:  99 | Time: 20.6min
+[ 270/1000] MCTS | Reward: -2220.00 | Best:  -540.00 | Length:  99 | Time: 21.4min
+[ 280/1000] MCTS | Reward: -1990.00 | Best:  -540.00 | Length:  99 | Time: 22.2min
+[ 290/1000] MCTS | Reward: -1670.00 | Best:  -540.00 | Length:  99 | Time: 23.0min
+[ 300/1000] MCTS | Reward: -2025.00 | Best:  -540.00 | Length:  99 | Time: 23.8min
+[ 310/1000] MCTS | Reward: -2195.00 | Best:  -540.00 | Length:  99 | Time: 24.6min
+[ 320/1000] MCTS | Reward: -3205.00 | Best:  -540.00 | Length:  99 | Time: 25.4min
+[ 330/1000] MCTS | Reward: -1165.00 | Best:  -540.00 | Length:  99 | Time: 26.1min
+[ 340/1000] MCTS | Reward:  -910.00 | Best:  -540.00 | Length:  99 | Time: 26.9min
+[ 350/1000] MCTS | Reward: -3335.00 | Best:  -540.00 | Length:  99 | Time: 27.7min
+[ 360/1000] MCTS | Reward: -2435.00 | Best:  -540.00 | Length:  99 | Time: 28.5min
+[ 370/1000] MCTS | Reward: -2330.00 | Best:  -540.00 | Length:  99 | Time: 29.3min
+[ 380/1000] MCTS | Reward: -1560.00 | Best:  -540.00 | Length:  99 | Time: 30.0min
+[ 390/1000] MCTS | Reward: -2375.00 | Best:  -540.00 | Length:  99 | Time: 30.8min
+[ 400/1000] MCTS | Reward: -1855.00 | Best:  -540.00 | Length:  99 | Time: 31.6min
+[ 410/1000] MCTS | Reward: -1405.00 | Best:  -540.00 | Length:  99 | Time: 32.4min
+[ 420/1000] MCTS | Reward: -2075.00 | Best:  -540.00 | Length:  99 | Time: 33.2min
+[ 430/1000] MCTS | Reward: -1175.00 | Best:  -540.00 | Length:  99 | Time: 34.0min
+[ 440/1000] MCTS | Reward: -1670.00 | Best:  -540.00 | Length:  99 | Time: 34.7min
+[ 450/1000] MCTS | Reward: -1270.00 | Best:  -540.00 | Length:  99 | Time: 35.5min
+[ 460/1000] MCTS | Reward: -3235.00 | Best:  -540.00 | Length:  99 | Time: 36.3min
+[ 470/1000] MCTS | Reward: -2320.00 | Best:  -540.00 | Length:  99 | Time: 37.1min
+[ 480/1000] MCTS | Reward: -1355.00 | Best:  -540.00 | Length:  99 | Time: 37.8min
+[ 490/1000] MCTS | Reward: -1860.00 | Best:  -540.00 | Length:  99 | Time: 38.6min
+[ 500/1000] MCTS | Reward: -2090.00 | Best:  -540.00 | Length:  99 | Time: 39.4min
+[ 510/1000] MCTS | Reward: -1165.00 | Best:  -540.00 | Length:  99 | Time: 40.2min
+[ 520/1000] MCTS | Reward: -1260.00 | Best:  -540.00 | Length:  99 | Time: 41.0min
+[ 530/1000] MCTS | Reward: -2335.00 | Best:  -540.00 | Length:  99 | Time: 41.8min
+[ 540/1000] MCTS | Reward: -2040.00 | Best:  -540.00 | Length:  99 | Time: 42.5min
+[ 550/1000] MCTS | Reward: -2880.00 | Best:  -540.00 | Length:  99 | Time: 43.3min
+[ 560/1000] MCTS | Reward: -1625.00 | Best:  -540.00 | Length:  99 | Time: 44.1min
+[ 570/1000] MCTS | Reward: -1975.00 | Best:  -540.00 | Length:  99 | Time: 44.9min
+[ 580/1000] MCTS | Reward: -2040.00 | Best:  -540.00 | Length:  99 | Time: 45.7min
+[ 590/1000] MCTS | Reward: -1480.00 | Best:  -540.00 | Length:  99 | Time: 46.4min
+[ 600/1000] MCTS | Reward: -3410.00 | Best:  -540.00 | Length:  99 | Time: 47.2min
+[ 610/1000] MCTS | Reward: -2430.00 | Best:  -540.00 | Length:  99 | Time: 48.0min
+[ 620/1000] MCTS | Reward: -1505.00 | Best:  -540.00 | Length:  99 | Time: 48.7min
+[ 630/1000] MCTS | Reward: -1680.00 | Best:  -540.00 | Length:  99 | Time: 49.6min
+[ 640/1000] MCTS | Reward: -1385.00 | Best:  -540.00 | Length:  99 | Time: 50.4min
+[ 650/1000] MCTS | Reward: -2370.00 | Best:  -540.00 | Length:  99 | Time: 51.2min
+[ 660/1000] MCTS | Reward: -2730.00 | Best:  -540.00 | Length:  99 | Time: 51.9min
+[ 670/1000] MCTS | Reward: -1455.00 | Best:  -540.00 | Length:  99 | Time: 52.7min
+[ 680/1000] MCTS | Reward: -1835.00 | Best:  -540.00 | Length:  99 | Time: 53.5min
+[ 690/1000] MCTS | Reward: -2965.00 | Best:  -540.00 | Length:  99 | Time: 54.3min
+[ 700/1000] MCTS | Reward: -2305.00 | Best:  -540.00 | Length:  99 | Time: 55.0min
+[ 710/1000] MCTS | Reward: -1745.00 | Best:  -540.00 | Length:  99 | Time: 55.8min
+[ 720/1000] MCTS | Reward: -1370.00 | Best:  -540.00 | Length:  99 | Time: 56.5min
+[ 730/1000] MCTS | Reward: -1495.00 | Best:  -540.00 | Length:  99 | Time: 57.3min
+[ 740/1000] MCTS | Reward: -1955.00 | Best:  -540.00 | Length:  99 | Time: 58.1min
+[ 750/1000] MCTS | Reward: -2615.00 | Best:  -390.00 | Length:  99 | Time: 58.9min
+[ 760/1000] MCTS | Reward: -1745.00 | Best:  -390.00 | Length:  99 | Time: 59.7min
+[ 770/1000] MCTS | Reward:  -950.00 | Best:  -390.00 | Length:  99 | Time: 60.5min
+[ 780/1000] MCTS | Reward: -2095.00 | Best:  -390.00 | Length:  99 | Time: 61.3min
+[ 790/1000] MCTS | Reward: -1460.00 | Best:  -390.00 | Length:  99 | Time: 62.0min
+[ 800/1000] MCTS | Reward: -1810.00 | Best:  -390.00 | Length:  99 | Time: 62.8min
+[ 810/1000] MCTS | Reward: -2720.00 | Best:  -390.00 | Length:  99 | Time: 63.6min
+[ 820/1000] MCTS | Reward: -1960.00 | Best:  -390.00 | Length:  99 | Time: 64.4min
+[ 830/1000] MCTS | Reward: -2875.00 | Best:  -390.00 | Length:  99 | Time: 65.2min
+[ 840/1000] MCTS | Reward: -1230.00 | Best:  -390.00 | Length:  99 | Time: 66.0min
+[ 850/1000] MCTS | Reward: -1460.00 | Best:  -390.00 | Length:  99 | Time: 66.8min
+[ 860/1000] MCTS | Reward: -1495.00 | Best:  -390.00 | Length:  99 | Time: 67.5min
+[ 870/1000] MCTS | Reward: -1830.00 | Best:  -390.00 | Length:  99 | Time: 68.3min
+[ 880/1000] MCTS | Reward: -1895.00 | Best:  -390.00 | Length:  99 | Time: 69.1min
+[ 890/1000] MCTS | Reward: -1805.00 | Best:  -390.00 | Length:  99 | Time: 69.9min
+[ 900/1000] MCTS | Reward: -2205.00 | Best:  -390.00 | Length:  99 | Time: 70.7min
+[ 910/1000] MCTS | Reward: -1855.00 | Best:  -390.00 | Length:  99 | Time: 71.5min
+[ 920/1000] MCTS | Reward: -1730.00 | Best:  -390.00 | Length:  99 | Time: 72.3min
+[ 930/1000] MCTS | Reward: -2000.00 | Best:  -390.00 | Length:  99 | Time: 73.1min
+[ 940/1000] MCTS | Reward: -1055.00 | Best:  -390.00 | Length:  99 | Time: 73.8min
+[ 950/1000] MCTS | Reward: -3240.00 | Best:  -390.00 | Length:  99 | Time: 74.6min
+[ 960/1000] MCTS | Reward: -1620.00 | Best:  -390.00 | Length:  99 | Time: 75.4min
+[ 970/1000] MCTS | Reward: -1825.00 | Best:  -390.00 | Length:  99 | Time: 76.1min
+[ 980/1000] MCTS | Reward: -2865.00 | Best:  -390.00 | Length:  99 | Time: 76.9min
+[ 990/1000] MCTS | Reward: -1645.00 | Best:  -390.00 | Length:  99 | Time: 77.7min
+[ 999/1000] MCTS | Reward: -1190.00 | Best:  -390.00 | Length:  99 | Time: 78.4min
+训练数据已保存到: parallel_training_20251209_221154/checkpoints/training_data/mcts_training_data.json
+
+MCTS 训练完成！
+  总耗时: 78.4 分钟
+  平均奖励: -1978.64
+  最佳奖励: -390.00
+================================================================================
+

@@ -1,0 +1,3 @@
+iteration,episode_reward_mean,episode_reward_max,episode_reward_min,episode_len_mean,policy_loss,vf_loss,entropy,kl,elapsed_time,best_reward
+0,-2274.25,-1450.0,-3665.0,99.0,0,0,0,0,15122.578218698502,-2274.25
+1,-2400.5,-1185.0,-5570.0,99.0,0,0,0,0,15170.498039722443,-2274.25
