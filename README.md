@@ -4,7 +4,7 @@
 </h3>
 
 <p align="center">
-  <a href="https://arxiv.org/pdf/2601.02196">
+  <a href="https://arxiv.org/abs/2601.02196">
     <img src="https://img.shields.io/badge/arXiv-Paper-red?style=flat-square&logo=arxiv" alt="arXiv Paper"></a>
   &nbsp;
   <a href="https://github.com/Skylanding/ACDZero">
